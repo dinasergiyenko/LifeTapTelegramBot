@@ -33,9 +33,8 @@ namespace LifeTapTelegramBot.Controllers
             var subscribedUsers = _userService.GetSubscribers(eventViewModel.Usernames);
             var message = string.Format(
                 _botMessages.SubscriptionMessage,
-                eventViewModel.Name,
-                eventViewModel.Description,
-                eventViewModel.Link);
+                eventViewModel.Title,
+                eventViewModel.Description);
 
             foreach (var subscribedUser in subscribedUsers)
             {
